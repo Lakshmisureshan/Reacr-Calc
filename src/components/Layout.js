@@ -9,7 +9,10 @@ const Layout = (props) => {
     if (value === '=') {
       if (input !== '') {
         let res = '';
+        alert(input);
         try {
+          res = eval(input);
+          alert(res);
         } catch (err) {
           setResult('Math Error');
         }
@@ -24,6 +27,7 @@ const Layout = (props) => {
       setResult('');
       setInput('0');
     } else if (value === 'DEL') {
+      alert('fghfghf');
       let str = input;
       str = str.substr(0, str.length - 1);
       setInput(str);
@@ -44,21 +48,21 @@ const Layout = (props) => {
             type="button"
             value={'C'}
             className="button clear"
-            onClick={() => {}}
+            onClick={handleClick}
           ></input>
 
           <input
             type="button"
             value={'DEL'}
             className="button clear"
-            onClick={() => {}}
+            onClick={handleClick}
           ></input>
 
           <input
             type="button"
             value={'%'}
             className="button operator"
-            onClick={() => {}}
+            onClick={handleClick}
           ></input>
 
           <input
