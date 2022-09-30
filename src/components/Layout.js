@@ -24,14 +24,20 @@ const Layout = (props) => {
       setResult('');
       setInput('0');
     } else if (value === 'DEL') {
-    let str=
+      let str = input;
+      str = str.substr(0, str.length - 1);
+      setInput(str);
+    } else if (input === 0) {
+      setInput(value);
+    } else {
+      setInput((input += value));
     }
   };
 
   return (
     <div className="frame">
       <div className="calculator">
-        <Output />
+        <Output user={input} answer={result} />
         <img />
         <div className="keys">
           <input
