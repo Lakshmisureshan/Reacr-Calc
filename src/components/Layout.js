@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Layout.css';
 import Output from './output.js';
 const Layout = (props) => {
-  let [input, setInput] = useState('0');
+  let [input, setInput] = useState('');
   let [result, setResult] = useState('');
   const handleClick = (event) => {
     const value = event.target.value;
