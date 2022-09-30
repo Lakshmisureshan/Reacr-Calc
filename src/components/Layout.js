@@ -24,8 +24,7 @@ const Layout = (props) => {
       setResult('');
       setInput('0');
     } else if (value === 'DEL') {
-      setResult('');
-      setInput('0');
+    let str=
     }
   };
 
